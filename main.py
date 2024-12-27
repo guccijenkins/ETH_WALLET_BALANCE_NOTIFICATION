@@ -2,6 +2,7 @@ import os
 import requests
 import smtplib
 from dotenv import load_dotenv
+import time
 
 load_dotenv('.env')
 
@@ -33,6 +34,7 @@ for i in chains:
         rounded = round(ETHER, 2)
         text = (f"The ETH Balance on chain {i} at address {a} is {rounded}.")
         text_body.append(text)
+        time.sleep(.5)
 
 ETH = []
 OP = []
