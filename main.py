@@ -29,8 +29,8 @@ for i in chains:
         }
 
         response = requests.get(url=url, params=params)
-        ETH = int(response.json()['result']) * 10**-18
-        rounded = round(ETH,2)
+        ETHER = int(response.json()['result']) * 10**-18
+        rounded = round(ETHER, 2)
         text = (f"The ETH Balance on chain {i} at address {a} is {rounded}.")
         text_body.append(text)
 
